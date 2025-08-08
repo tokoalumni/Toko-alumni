@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toko Komunitas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Toko Komunitas</h1>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#">Produk</a>
+      <a href="#">Tentang Kami</a>
+    </nav>
+  </header>
+
+  <section class="login">
+    <h2>Login Anggota</h2>
+    <input type="text" id="username" placeholder="Nama pengguna" />
+    <input type="password" id="password" placeholder="Kata sandi" />
+    <button onclick="login()">Masuk</button>
+    <p id="login-status"></p>
+  </section>
+
+  <main>
+    <section class="produk-container">
+      <!-- Produk awal -->
+      <div class="produk">
+        <img src="https://via.placeholder.com/150" alt="Produk 1" />
+        <h2>Kerajinan Tangan</h2>
+        <p>Rp50.000</p>
+        <button onclick="tambahKeKeranjang('Kerajinan Tangan')">Beli</button>
+      </div>
+    </section>
+
+    <section class="keranjang">
+      <h2>Keranjang Belanja</h2>
+      <ul id="daftar-keranjang"></ul>
+    </section>
+
+    <section class="checkout">
+      <h2>Checkout</h2>
+      <p>Total item: <span id="total-item">0</span></p>
+      <button onclick="checkout()">Lanjut Bayar</button>
+      <p id="checkout-info"></p>
+    </section>
+
+    <section class="admin-panel">
+      <h2>Admin: Tambah Produk</h2>
+      <input type="text" id="nama-produk" placeholder="Nama Produk" />
+      <input type="text" id="harga-produk" placeholder="Harga (Rp)" />
+      <input type="text" id="gambar-produk" placeholder="URL Gambar" />
+      <button onclick="tambahProduk()">Tambah Produk</button>
+      <p id="admin-status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Komunitas Kertapati</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
